@@ -14,7 +14,7 @@ async function generateQuestions() {
 
     // Make API call to generate questions
     const response = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: "gpt-3.5-turbo-instruct",
       prompt: "Book: Eloquent JavaScript\nQuestion:",
       max_tokens: 64,
     });
@@ -31,6 +31,3 @@ async function generateQuestions() {
   }
 }
 generateQuestions();
-
-
-
